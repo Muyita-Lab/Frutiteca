@@ -3,111 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frutiteca Abierta - Soberanía Alimentaria</title>
+    <title>Frutiteca Abierta - Técnicas de Deshidratación</title>
     <style>
         :root {
-            --primario: #e67e22; /* Color naranja fruta */
-            --secundario: #27ae60; /* Verde hoja */
+            --primario: #d35400; /* Naranja tostado */
+            --secundario: #27ae60; 
+            --solar: #f1c40f; /* Amarillo sol */
+            --electrico: #2980b9; /* Azul energía */
             --oscuro: #2c3e50;
             --claro: #fdfaf5;
         }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--claro); color: var(--oscuro); margin: 0; line-height: 1.6; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: var(--claro); color: var(--oscuro); margin: 0; line-height: 1.6; }
         header { background: var(--oscuro); color: white; padding: 2rem; text-align: center; border-bottom: 5px solid var(--primario); }
         .container { max-width: 900px; margin: auto; padding: 20px; }
         
-        /* Secciones */
         section { background: white; padding: 25px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         h2 { color: var(--primario); border-bottom: 2px solid #eee; padding-bottom: 10px; }
 
+        /* Comparativa */
+        .metodos { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+        .metodo-card { padding: 15px; border-radius: 10px; border-top: 5px solid; }
+        .solar-card { border-top-color: var(--solar); background: #fffde7; }
+        .horno-card { border-top-color: var(--electrico); background: #e3f2fd; }
+
         /* Calculadora */
-        .calc-box { display: grid; gap: 15px; background: #fff8f0; padding: 20px; border-radius: 10px; border: 1px solid #ffe0b2; }
-        input, select, button { padding: 12px; border-radius: 8px; border: 1px solid #ddd; font-size: 1rem; }
-        button { background: var(--primario); color: white; border: none; cursor: pointer; font-weight: bold; transition: 0.3s; }
-        button:hover { background: #d35400; }
+        .calc-box { background: #fff8f0; padding: 20px; border-radius: 10px; border: 1px solid #ffe0b2; }
+        input, select, button { width: 100%; padding: 12px; margin-top: 10px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box; }
+        button { background: var(--primario); color: white; border: none; font-weight: bold; cursor: pointer; }
         #resultado { margin-top: 15px; padding: 15px; background: var(--secundario); color: white; border-radius: 8px; display: none; }
 
-        /* Multimedia Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .card { background: #f9f9f9; border: 1px solid #eee; padding: 15px; border-radius: 10px; text-align: center; }
-        .card img { max-width: 100%; border-radius: 8px; }
-        .btn-descarga { display: inline-block; margin-top: 10px; padding: 8px 15px; background: var(--secundario); color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem; }
-
-        footer { text-align: center; padding: 40px; font-size: 0.9rem; color: #7f8c8d; }
+        .footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #7f8c8d; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>🍎 FRUTITECA ABIERTA</h1>
-    <p>Conocimiento Libre para la Soberanía Alimentaria</p>
+    <p>Soberanía Alimentaria: Métodos Solar y Eléctrico</p>
 </header>
 
 <div class="container">
     
     <section>
-        <h2>¿Por qué deshidratar?</h2>
-        <p>La deshidratación solar nos permite rescatar los excedentes de las cosechas locales, eliminando la dependencia de conservantes industriales y asegurando nutrientes para nuestras familias durante todo el año. <strong>¡Comida libre, pueblos soberanos!</strong></p>
+        <h2>Tipos de Deshidratación</h2>
+        <p>Para lograr la soberanía alimentaria, debemos conocer nuestras herramientas. Aquí comparamos los dos métodos principales:</p>
+        
+        <div class="metodos">
+            <div class="metodo-card solar-card">
+                <h3>☀️ Deshidratación Solar</h3>
+                <p>Usa la energía gratuita del sol. Es ideal para grandes cantidades y climas secos.</p>
+                <ul>
+                    <li>Costo energético: 0</li>
+                    <li>Tiempo: 2 a 4 días</li>
+                    <li>Sostenibilidad: Máxima</li>
+                </ul>
+            </div>
+            <div class="metodo-card horno-card">
+                <h3>🔌 Horno deshidratador</h3>
+                <p>Usa el horno deshidratador con temperaturas entre (50°C - 80°C). Ideal para deshidratacion uniforme.</p>
+                <ul>
+                    <li>Costo energético: Variable</li>
+                    <li>Tiempo: 6 a 12 horas</li>
+                    <li>Control: Preciso y constante</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section>
-        <h2>🧮 Calculadora de Autonomía</h2>
+        <h2>🔥 Guía: Deshidratación en Horno</h2>
+        <p>Si usas un horno eléctrico o a gas en casa (doméstico), sigue estos pasos clave para no "cocinar" la fruta, sino secarla:</p>
+        <ol>
+            <li><strong>Temperatura mínima:</strong> El horno debe estar entre 50°C y 80°C.</li>
+            <li><strong>Circulación de aire:</strong> Deja la puerta del horno entreabierta (unos 2-5 cm) para que salga la humedad.</li>
+            <li><strong>Bandejas:</strong> Usa papel de horno o rejillas para que el aire pase por debajo.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>🧮 Calculadora de Reserva</h2>
         <div class="calc-box">
-            <label>Elige la fruta:</label>
+            <label>Fruta a procesar:</label>
             <select id="fruta">
-                <option value="0.15">Mango (Rinde 15%)</option>
-                <option value="0.20">Manzana (Rinde 20%)</option>
-                <option value="0.12">Piña (Rinde 12%)</option>
-                <option value="0.25">Banano (Rinde 25%)</option>
+                <option value="0.15">Mango (15% rinde)</option>
+                <option value="0.20">Manzana (20% rinde)</option>
+                <option value="0.12">Piña (12% rinde)</option>
+                <option value="0.25">Banano (25% rinde)</option>
             </select>
-            <label>Kilos frescos:</label>
-            <input type="number" id="kilos" placeholder="Ej: 10">
-            <button onclick="calcular()">Calcular Reserva</button>
+            <input type="number" id="kilos" placeholder="Kilos frescos (Ej: 3)">
+            <button onclick="calcular()">Calcular Autonomía</button>
             <div id="resultado"></div>
-        </div>
-    </section>
-
-    <section>
-        <h2>🎥 Video-Laboratorio</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>El Deshidratador Solar</h3>
-                <p>Aprende a construir un secador artesanal con materiales reciclados.</p>
-                <div style="background:#ddd; height:150px; border-radius:8px; display:flex; align-items:center; justify-content:center;">
-                   [Vídeo en proceso]
-                </div>
-            </div>
-            <div class="card">
-                <h3>Técnicas de Corte</h3>
-                <p>Cómo preparar la fruta para un secado uniforme y seguro.</p>
-                <div style="background:#ddd; height:150px; border-radius:8px; display:flex; align-items:center; justify-content:center;">
-                   [Vídeo en proceso]
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>📚 Biblioteca de Acceso Libre</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Manual de Secado Solar</h3>
-                <p>Guía completa en PDF para la comunidad.</p>
-                <a href="#" class="btn-descarga">Leer Ebook (Próximamente)</a>
-            </div>
-            <div class="card">
-                <h3>Recetario Soberano</h3>
-                <p>Usos creativos de la fruta seca en la cocina local.</p>
-                <a href="#" class="btn-descarga">Leer Ebook (Próximamente)</a>
-            </div>
         </div>
     </section>
 
 </div>
 
-<footer>
-    <p>© 2026 Frutiteca Abierta. Este proyecto es de <strong>Acceso Libre</strong>.<br>
-    Distribuido bajo licencia Creative Commons BY-SA 4.0</p>
-</footer>
+<div class="footer">
+    <p>Proyecto de Acceso Libre - Frutiteca Abierta 2026<br>
+    Soberanía Alimentaria para todos.</p>
+</div>
 
 <script>
     function calcular() {
@@ -119,9 +113,7 @@
             const final = (kg * rend).toFixed(2);
             const raciones = Math.floor((final * 1000) / 30);
             res.style.display = 'block';
-            res.innerHTML = `<strong>Resultado:</strong> Obtendrás <b>${final} kg</b> de alimento seco. <br> ¡Eso son <b>${raciones} raciones</b> de salud para tu comunidad!`;
-        } else {
-            alert("Por favor ingresa los kilos.");
+            res.innerHTML = `<strong>Reserva lograda:</strong> ${final} kg de alimento seco (${raciones} porciones).`;
         }
     }
 </script>
